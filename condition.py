@@ -55,10 +55,15 @@ count = 500
 # con = multiprocessing.Condition()
 
 
+class MyManager(BaseManager):
+    pass
+
+
 def test():
+    # MyManager.register()
     with Manager() as manager:
-        print(manager.address)
-        print(manager.connect())
+        print("address", manager.address)
+        print("connect", manager.connect())
         con = manager.Condition()
         for i in range(2):
             p = Producer(con)
