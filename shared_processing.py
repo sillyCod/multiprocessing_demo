@@ -3,12 +3,12 @@
 import multiprocessing
 
 
-def func(mydict, mylist):
-    mydict["index1"] = "aaaaaa"  # 子进程改变dict,主进程跟着改变
-    mydict["index2"] = "bbbbbb"
-    mylist.append(11)  # 子进程改变List,主进程跟着改变
-    mylist.append(22)
-    mylist.append(33)
+def func(my_dict, my_list):
+    my_dict["index1"] = "aaaaaa"  # 子进程改变dict,主进程跟着改变
+    my_dict["index2"] = "bbbbbb"
+    my_list.append(11)  # 子进程改变List,主进程跟着改变
+    my_list.append(22)
+    my_list.append(33)
 
 
 if __name__ == "__main__":
